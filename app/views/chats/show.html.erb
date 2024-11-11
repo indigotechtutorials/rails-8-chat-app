@@ -1,0 +1,6 @@
+<%= turbo_stream_from :indigo %>
+<div class="w-full flex flex-col" id="custom-target-id"> 
+  <h1 class="text-5xl" id="header-message"> <%= @chat.name %> </h1>
+  <%= turbo_stream_from @chat, :messages %>
+  <%= turbo_frame_tag :messages, src: chat_messages_path(@chat) %>
+</div>

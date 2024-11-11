@@ -1,0 +1,4 @@
+<div id="<%= dom_id message %>" class="p-4 rounded-lg text-blue-50 flex flex-col bg-gradient-to-br <%= random_background %>">
+  <span> <%= message.body %> </span>
+  <p class="text-sm text-gray-100"> from <%= message.from_user %> at <%= message.created_at.strftime("%-l:%M%P, %B %-d, %Y") %> </p>
+</div>
